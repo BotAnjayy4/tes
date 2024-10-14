@@ -1,0 +1,60 @@
+:root {
+    --warna-bg: rgba(0, 0, 0, .5); 
+    --warna-teks: #fff;
+    --warna-bingkai: #fff;
+    --bingkai: 8px;
+    --bingkai-kiri: 2px solid var(--warna-bingkai);
+    --bingkai-kanan: 2px solid var(--warna-bingkai);
+    --gaya-font: 'Josefin Sans', sans-serif;
+}
+
+body {
+    font-family: var(--gaya-font);
+    background-color: var(--warna-bg);
+}
+
+#wallpaper {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#Content {
+    opacity: 0;
+    margin-top: 8vh;
+    transition: opacity 1s ease;
+}
+
+blockquote {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.1);
+    border-radius: var(--bingkai);
+    transition: all 1s ease;
+}
+
+#Tombol a {
+    margin: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Animations for hearts */
+.fas.fa-heart {
+    position: absolute;
+    color: red;
+    font-size: 2rem;
+    animation: fly 5s ease-in infinite;
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
